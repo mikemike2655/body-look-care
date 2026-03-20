@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "Body Look Care - Medusa + React",
   "private": true,
+  "packageManager": "pnpm@latest",
   "scripts": {
-    "dev": "cd frontend && npm run start",
-    "build": "cd frontend && npm run build",
-    "start": "cd frontend && npm run start",
+    "dev": "cd frontend && npm install --legacy-peer-deps && npm start",
+    "build": "cd frontend && npm install --legacy-peer-deps && CI=false npm run build",
+    "start": "cd frontend && npm start",
     "backend:dev": "cd medusa-backend && npm run dev"
-  }
+  },
+  "dependencies": {},
+  "devDependencies": {}
 }
