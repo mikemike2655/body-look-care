@@ -1,12 +1,5 @@
 // craco.config.js
 const path = require("path");
-require("dotenv").config();
-
-// Environment variable overrides
-const config = {
-  enableHealthCheck: process.env.ENABLE_HEALTH_CHECK === "true",
-  enableVisualEdits: false, // Disabled - plugins not found
-};
 
 const webpackConfig = {
   eslint: {
@@ -21,21 +14,6 @@ const webpackConfig = {
   webpack: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
-    },
-    configure: (webpackConfig) => {
-      // Add ignored patterns to reduce watched directories
-      webpackConfig.watchOptions = {
-        ...webpackConfig.watchOptions,
-        ignored: [
-          '**/node_modules/**',
-          '**/.git/**',
-          '**/build/**',
-          '**/dist/**',
-          '**/coverage/**',
-          '**/public/**',
-        ],
-      };
-      return webpackConfig;
     },
   },
 };
