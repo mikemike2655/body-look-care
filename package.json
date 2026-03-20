@@ -1,0 +1,14 @@
+{
+  "name": "body-look-care",
+  "version": "1.0.0",
+  "description": "Body Look Care - Medusa + React",
+  "private": true,
+  "packageManager": "pnpm@latest",
+  "scripts": {
+    "dev": "npm --prefix frontend install --legacy-peer-deps && npm --prefix frontend start",
+    "build": "npm --prefix frontend install --legacy-peer-deps && npm --prefix frontend run build",
+    "start": "npm --prefix frontend start"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
