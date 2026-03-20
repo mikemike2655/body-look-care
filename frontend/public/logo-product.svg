@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <rect width="400" height="400" fill="#F9F7F2"/>
+  <text x="200" y="170" font-family="Arial Black, sans-serif" font-size="60" font-weight="900" fill="#4a4a4a" text-anchor="middle">BODY</text>
+  <text x="200" y="210" font-family="Arial, sans-serif" font-size="28" font-weight="300" fill="#5a5a5a" text-anchor="middle" letter-spacing="2">LOOK CARE</text>
+  <path d="M 80 240 Q 140 220 200 240 Q 260 260 320 240 Q 280 270 200 255 Q 120 240 80 240" fill="#7cb342"/>
+</svg>

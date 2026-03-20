@@ -1,0 +1,339 @@
+/* GrapesJS Dark Theme Override for Body Look Care Admin */
+
+.gjs-dark-editor {
+  --gjs-primary: #10b981;
+  --gjs-secondary: #1a1d27;
+  --gjs-bg: #0f1117;
+}
+
+/* Main containers */
+.gjs-dark-editor .gjs-one-bg {
+  background-color: #1a1d27 !important;
+}
+
+.gjs-dark-editor .gjs-two-color {
+  color: #e5e7eb !important;
+}
+
+.gjs-dark-editor .gjs-three-bg {
+  background-color: #0f1117 !important;
+}
+
+.gjs-dark-editor .gjs-four-color,
+.gjs-dark-editor .gjs-four-color-h:hover {
+  color: #10b981 !important;
+}
+
+/* Editor chrome */
+.gjs-dark-editor .gjs-editor {
+  background-color: #0f1117 !important;
+  border: none !important;
+}
+
+.gjs-dark-editor .gjs-cv-canvas {
+  background-color: #1a1d27 !important;
+  top: 0 !important;
+}
+
+/* Panels */
+.gjs-dark-editor .gjs-pn-panel {
+  background-color: #1a1d27 !important;
+  border-color: #2d3142 !important;
+}
+
+.gjs-dark-editor .gjs-pn-views-container,
+.gjs-dark-editor .gjs-pn-views {
+  background-color: #1a1d27 !important;
+}
+
+.gjs-dark-editor .gjs-pn-btn {
+  color: #9ca3af !important;
+}
+
+.gjs-dark-editor .gjs-pn-btn:hover {
+  color: #e5e7eb !important;
+}
+
+.gjs-dark-editor .gjs-pn-btn.gjs-pn-active {
+  color: #10b981 !important;
+  box-shadow: none !important;
+}
+
+/* Blocks */
+.gjs-dark-editor .gjs-blocks-c {
+  background-color: #1a1d27 !important;
+}
+
+.gjs-dark-editor .gjs-block {
+  background-color: #0f1117 !important;
+  border: 1px solid #2d3142 !important;
+  border-radius: 8px !important;
+  color: #d1d5db !important;
+  min-height: 70px !important;
+  transition: all 0.2s !important;
+  margin: 3px !important;
+}
+
+.gjs-dark-editor .gjs-block:hover {
+  border-color: #10b981 !important;
+  box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.2) !important;
+}
+
+.gjs-dark-editor .gjs-block svg {
+  fill: none !important;
+  stroke: #9ca3af !important;
+}
+
+.gjs-dark-editor .gjs-block:hover svg {
+  stroke: #10b981 !important;
+}
+
+.gjs-dark-editor .gjs-block-label {
+  font-size: 11px !important;
+  color: #9ca3af !important;
+}
+
+.gjs-dark-editor .gjs-block:hover .gjs-block-label {
+  color: #e5e7eb !important;
+}
+
+.gjs-dark-editor .gjs-block-category {
+  background-color: #1a1d27 !important;
+  border-bottom: 1px solid #2d3142 !important;
+}
+
+.gjs-dark-editor .gjs-block-category .gjs-title {
+  background-color: #1a1d27 !important;
+  color: #10b981 !important;
+  font-weight: 600 !important;
+  font-size: 12px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  border-bottom: 1px solid #2d3142 !important;
+}
+
+/* Style Manager */
+.gjs-dark-editor .gjs-sm-sector {
+  border-bottom: 1px solid #2d3142 !important;
+}
+
+.gjs-dark-editor .gjs-sm-sector .gjs-sm-sector-title {
+  background-color: #1a1d27 !important;
+  color: #d1d5db !important;
+  border-bottom: 1px solid #2d3142 !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+}
+
+.gjs-dark-editor .gjs-sm-property {
+  color: #9ca3af !important;
+}
+
+.gjs-dark-editor .gjs-sm-label {
+  color: #9ca3af !important;
+  font-size: 11px !important;
+}
+
+.gjs-dark-editor .gjs-field {
+  background-color: #0f1117 !important;
+  border: 1px solid #2d3142 !important;
+  border-radius: 6px !important;
+  color: #e5e7eb !important;
+}
+
+.gjs-dark-editor .gjs-field:focus-within {
+  border-color: #10b981 !important;
+}
+
+.gjs-dark-editor .gjs-field input,
+.gjs-dark-editor .gjs-field select,
+.gjs-dark-editor .gjs-field textarea {
+  color: #e5e7eb !important;
+  background: transparent !important;
+}
+
+.gjs-dark-editor .gjs-field-arrows {
+  color: #9ca3af !important;
+}
+
+/* Layers */
+.gjs-dark-editor .gjs-layers {
+  background-color: #1a1d27 !important;
+}
+
+.gjs-dark-editor .gjs-layer {
+  background-color: #1a1d27 !important;
+  border-bottom: 1px solid #2d3142 !important;
+}
+
+.gjs-dark-editor .gjs-layer:hover {
+  background-color: #0f1117 !important;
+}
+
+.gjs-dark-editor .gjs-layer-name {
+  color: #d1d5db !important;
+  font-size: 12px !important;
+}
+
+.gjs-dark-editor .gjs-layer.gjs-selected {
+  background-color: rgba(16, 185, 129, 0.1) !important;
+}
+
+.gjs-dark-editor .gjs-layer-title {
+  background-color: transparent !important;
+}
+
+/* Toolbar on selected element */
+.gjs-dark-editor .gjs-toolbar {
+  background-color: #10b981 !important;
+  border-radius: 6px !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3) !important;
+}
+
+.gjs-dark-editor .gjs-toolbar-item {
+  color: white !important;
+}
+
+/* Selection highlight */
+.gjs-dark-editor .gjs-selected {
+  outline: 2px solid #10b981 !important;
+  outline-offset: -2px;
+}
+
+.gjs-dark-editor .gjs-hovered {
+  outline: 1px dashed rgba(16, 185, 129, 0.5) !important;
+}
+
+/* Badge */
+.gjs-dark-editor .gjs-badge {
+  background-color: #10b981 !important;
+  color: white !important;
+  font-size: 10px !important;
+  padding: 2px 6px !important;
+  border-radius: 4px !important;
+}
+
+/* Resizer */
+.gjs-dark-editor .gjs-resizer-h {
+  border-color: #10b981 !important;
+  background-color: #10b981 !important;
+}
+
+/* RTE */
+.gjs-dark-editor .gjs-rte-toolbar {
+  background-color: #1a1d27 !important;
+  border: 1px solid #2d3142 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4) !important;
+}
+
+.gjs-dark-editor .gjs-rte-actionbar {
+  background-color: #1a1d27 !important;
+}
+
+.gjs-dark-editor .gjs-rte-action {
+  color: #9ca3af !important;
+  border: none !important;
+}
+
+.gjs-dark-editor .gjs-rte-action:hover {
+  color: #10b981 !important;
+}
+
+.gjs-dark-editor .gjs-rte-active {
+  color: #10b981 !important;
+}
+
+/* Modals */
+.gjs-dark-editor .gjs-mdl-dialog {
+  background-color: #1a1d27 !important;
+  border-radius: 12px !important;
+  border: 1px solid #2d3142 !important;
+}
+
+.gjs-dark-editor .gjs-mdl-header {
+  background-color: #1a1d27 !important;
+  color: #e5e7eb !important;
+  border-bottom: 1px solid #2d3142 !important;
+}
+
+.gjs-dark-editor .gjs-mdl-title {
+  color: #e5e7eb !important;
+  font-weight: 600 !important;
+}
+
+.gjs-dark-editor .gjs-mdl-content {
+  background-color: #1a1d27 !important;
+  color: #d1d5db !important;
+}
+
+.gjs-dark-editor .gjs-mdl-btn-close {
+  color: #9ca3af !important;
+}
+
+/* Import dialog */
+.gjs-dark-editor .gjs-import-label {
+  color: #9ca3af !important;
+}
+
+.gjs-dark-editor .CodeMirror {
+  background-color: #0f1117 !important;
+  color: #d1d5db !important;
+  border: 1px solid #2d3142 !important;
+  border-radius: 8px !important;
+}
+
+/* Buttons */
+.gjs-dark-editor .gjs-btn-prim {
+  background-color: #10b981 !important;
+  color: white !important;
+  border-radius: 8px !important;
+  border: none !important;
+  font-weight: 600 !important;
+}
+
+/* Scrollbars */
+.gjs-dark-editor ::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.gjs-dark-editor ::-webkit-scrollbar-track {
+  background: #0f1117;
+}
+
+.gjs-dark-editor ::-webkit-scrollbar-thumb {
+  background: #2d3142;
+  border-radius: 3px;
+}
+
+.gjs-dark-editor ::-webkit-scrollbar-thumb:hover {
+  background: #3d4162;
+}
+
+/* Color picker */
+.gjs-dark-editor .gjs-clm-tags {
+  background-color: #1a1d27 !important;
+}
+
+.gjs-dark-editor .gjs-clm-tag {
+  background-color: #0f1117 !important;
+  border: 1px solid #2d3142 !important;
+  color: #d1d5db !important;
+  border-radius: 4px !important;
+}
+
+/* Trait manager */
+.gjs-dark-editor .gjs-trt-trait {
+  border-bottom: 1px solid #2d3142 !important;
+}
+
+.gjs-dark-editor .gjs-trt-trait .gjs-label {
+  color: #9ca3af !important;
+}
+
+/* Responsive overrides to hide default toolbar */
+.gjs-dark-editor .gjs-pn-commands,
+.gjs-dark-editor .gjs-pn-devices-c {
+  display: none !important;
+}

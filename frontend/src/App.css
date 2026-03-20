@@ -1,0 +1,175 @@
+/* BodyLookCare - Custom App Styles */
+
+/* Safe area for mobile devices */
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 20px);
+}
+
+/* Bottom navigation height compensation */
+.pb-nav {
+  padding-bottom: 80px;
+}
+
+@media (min-width: 768px) {
+  .pb-nav {
+    padding-bottom: 0;
+  }
+}
+
+/* Smooth page transitions */
+.page-transition {
+  animation: pageIn 0.4s ease-out;
+}
+
+@keyframes pageIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Product image hover zoom */
+.product-image-zoom {
+  overflow: hidden;
+}
+
+.product-image-zoom img {
+  transition: transform 0.5s ease-out;
+}
+
+.product-image-zoom:hover img {
+  transform: scale(1.05);
+}
+
+/* Sticky add to cart bar shadow */
+.sticky-bar-shadow {
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Category card hover effect */
+.category-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.category-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(44, 95, 45, 0.7), transparent 60%);
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
+
+.category-card:hover::before {
+  opacity: 0.9;
+}
+
+/* Star rating */
+.star-rating {
+  color: #D4A373;
+}
+
+/* Quantity selector */
+.quantity-btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  border: 1px solid #95B899;
+  color: #2C5F2D;
+  transition: all 0.2s ease;
+}
+
+.quantity-btn:hover {
+  background-color: #2C5F2D;
+  color: white;
+  border-color: #2C5F2D;
+}
+
+/* Toast animations */
+.toast-enter {
+  animation: toastIn 0.3s ease-out;
+}
+
+@keyframes toastIn {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile menu overlay */
+.menu-overlay {
+  background: rgba(44, 95, 45, 0.3);
+  backdrop-filter: blur(4px);
+}
+
+/* Price display */
+.price-current {
+  color: #2C5F2D;
+  font-weight: 600;
+}
+
+.price-compare {
+  color: #5C5C5B;
+  text-decoration: line-through;
+  font-size: 0.875em;
+}
+
+/* Focus states for accessibility */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid #2C5F2D;
+  outline-offset: 2px;
+}
+
+/* Loading skeleton */
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    #F0F4F0 25%,
+    #F9F7F2 50%,
+    #F0F4F0 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Notification dot */
+.notification-dot {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 18px;
+  height: 18px;
+  background: #B91C1C;
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

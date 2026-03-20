@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Geom:ital,wght@0,300..900;1,300..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 45 33% 97%;
+    --foreground: 60 2% 22%;
+    --card: 0 0% 100%;
+    --card-foreground: 60 2% 22%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 60 2% 22%;
+    --primary: 121 37% 27%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 121 24% 65%;
+    --secondary-foreground: 60 2% 22%;
+    --muted: 120 14% 95%;
+    --muted-foreground: 60 1% 40%;
+    --accent: 28 52% 64%;
+    --accent-foreground: 60 2% 22%;
+    --destructive: 0 72% 41%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 121 24% 85%;
+    --input: 121 24% 85%;
+    --ring: 121 37% 27%;
+    --radius: 0.75rem;
+    --chart-1: 121 37% 27%;
+    --chart-2: 121 24% 65%;
+    --chart-3: 28 52% 64%;
+    --chart-4: 45 33% 90%;
+    --chart-5: 60 2% 22%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body {
+    @apply bg-brand-cream text-brand-charcoal font-sans;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    overflow-x: hidden;
+  }
+  
+  h1, h2, h3 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-brand-forest text-white rounded-full px-8 py-3 font-medium 
+           hover:bg-brand-forest/90 transition-all duration-300 
+           shadow-lg hover:shadow-xl active:scale-95;
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent border-2 border-brand-forest text-brand-forest 
+           rounded-full px-8 py-3 font-medium hover:bg-brand-forest/5 
+           transition-all duration-300;
+  }
+  
+  .btn-icon {
+    @apply p-2.5 rounded-full hover:bg-brand-charcoal/5 text-brand-charcoal 
+           transition-colors duration-200;
+  }
+  
+  .card-product {
+    @apply bg-white rounded-2xl overflow-hidden shadow-sm 
+           border border-brand-sage/20 hover:shadow-lg 
+           transition-all duration-300;
+  }
+  
+  .input-line {
+    @apply w-full bg-transparent border-b-2 border-brand-sage/30 
+           focus:border-brand-forest px-0 py-3 outline-none 
+           transition-colors placeholder:text-brand-stone/50;
+  }
+  
+  .badge-bestseller {
+    @apply bg-brand-gold text-white text-xs font-accent uppercase tracking-wider px-3 py-1 rounded-full;
+  }
+  
+  .badge-new {
+    @apply bg-brand-forest text-white text-xs font-accent uppercase tracking-wider px-3 py-1 rounded-full;
+  }
+  
+  .badge-promo {
+    @apply bg-brand-error text-white text-xs font-accent uppercase tracking-wider px-3 py-1 rounded-full;
+  }
+  
+  .section-padding {
+    @apply px-4 md:px-8 lg:px-12 py-12 md:py-16 lg:py-20;
+  }
+  
+  .glass-effect {
+    @apply bg-white/80 backdrop-blur-xl border border-white/20;
+  }
+
+  /* ── Header premium styles ── */
+  .header-action-btn {
+    @apply p-2.5 rounded-full text-brand-charcoal/60 hover:text-brand-charcoal 
+           transition-all duration-300 relative;
+  }
+  .header-action-btn::after {
+    content: '';
+    @apply absolute inset-1 rounded-full bg-brand-charcoal/0 transition-all duration-300;
+  }
+  .header-action-btn:hover::after {
+    @apply bg-brand-charcoal/[0.04];
+  }
+  .header-action-btn:active {
+    @apply scale-90;
+  }
+
+  .cart-badge {
+    @apply absolute -top-0.5 -right-0.5 w-[18px] h-[18px] bg-brand-forest text-white 
+           text-[10px] font-semibold rounded-full flex items-center justify-center
+           animate-badge-pop;
+  }
+
+  .header-scrolled {
+    animation: header-settle 0.4s ease-out;
+  }
+
+  .notification-dot {
+    @apply absolute -top-0.5 -right-0.5 w-[18px] h-[18px] bg-brand-forest text-white 
+           text-[10px] font-semibold rounded-full flex items-center justify-center;
+  }
+}
+
+/* ── Keyframe animations ── */
+@keyframes badge-pop {
+  0% { transform: scale(0); }
+  60% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+.animate-badge-pop {
+  animation: badge-pop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes header-settle {
+  0% { transform: translateY(-4px); opacity: 0.8; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fade-up {
+  0% { opacity: 0; transform: translateY(12px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up {
+  animation: fade-up 0.6s ease-out forwards;
+}
+
+@keyframes slide-in-left {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee-container {
+  animation: none;
+}
+
+/* ── Premium product card ── */
+.product-card {
+  @apply bg-white rounded-2xl overflow-hidden transition-all duration-500;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+.product-card:hover {
+  box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+  transform: translateY(-4px);
+}
+.product-card .product-img {
+  @apply transition-transform duration-700 ease-out;
+}
+.product-card:hover .product-img {
+  transform: scale(1.06);
+}
+
+/* ── Scroll reveal ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Premium buttons ── */
+.btn-primary {
+  @apply bg-brand-forest text-white rounded-full font-medium transition-all duration-300;
+  position: relative;
+  overflow: hidden;
+}
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.15) 50%, transparent 70%);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+.btn-primary:hover::before {
+  transform: translateX(100%);
+}
+.btn-primary:hover {
+  box-shadow: 0 4px 16px rgba(34,85,68,0.3);
+  transform: translateY(-1px);
+}
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  @apply border border-brand-charcoal/20 text-brand-charcoal rounded-full font-medium 
+         transition-all duration-300 hover:border-brand-forest hover:text-brand-forest;
+}
+
+/* ── Stagger children animation ── */
+.stagger-children > * {
+  opacity: 0;
+  transform: translateY(16px);
+}
+.stagger-children.visible > * {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.stagger-children.visible > *:nth-child(1) { transition-delay: 0ms; }
+.stagger-children.visible > *:nth-child(2) { transition-delay: 80ms; }
+.stagger-children.visible > *:nth-child(3) { transition-delay: 160ms; }
+.stagger-children.visible > *:nth-child(4) { transition-delay: 240ms; }
+.stagger-children.visible > *:nth-child(5) { transition-delay: 320ms; }
+.stagger-children.visible > *:nth-child(6) { transition-delay: 400ms; }
+
+/* ── Divider line ── */
+.divider-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(34,85,68,0.15), transparent);
+}
+
+/* ── Image zoom on hover ── */
+.img-zoom {
+  @apply overflow-hidden;
+}
+.img-zoom img {
+  @apply transition-transform duration-700 ease-out;
+}
+.img-zoom:hover img {
+  transform: scale(1.05);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .animate-hover-lift {
+    @apply hover:-translate-y-1 transition-transform duration-300;
+  }
+  
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F9F7F2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #95B899;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2C5F2D;
+}
+
+/* Hide scrollbar on mobile bottom nav */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Image aspect ratios for products */
+.aspect-product {
+  aspect-ratio: 4/5;
+}
+
+.aspect-hero {
+  aspect-ratio: 16/9;
+}
+
+@media (max-width: 640px) {
+  .aspect-hero {
+    aspect-ratio: 9/16;
+  }
+}
+
+/* Debug wrapper */
+[data-debug-wrapper="true"] {
+  display: contents !important;
+}
