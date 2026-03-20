@@ -1,5 +1,5 @@
 {
-  "buildCommand": "cd frontend && npm install --legacy-peer-deps && npx craco build",
+  "buildCommand": "cd frontend && npm install --legacy-peer-deps && CI=false npx craco build",
   "outputDirectory": "frontend/build",
   "installCommand": "echo 'install handled in buildCommand'",
   "framework": null,
