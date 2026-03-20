@@ -5,10 +5,9 @@
   "private": true,
   "packageManager": "pnpm@latest",
   "scripts": {
-    "dev": "cd frontend && npm install --legacy-peer-deps && npm start",
-    "build": "cd frontend && npm install --legacy-peer-deps && CI=false npm run build",
-    "start": "cd frontend && npm start",
-    "backend:dev": "cd medusa-backend && npm run dev"
+    "dev": "npm --prefix frontend install --legacy-peer-deps && npm --prefix frontend start",
+    "build": "npm --prefix frontend install --legacy-peer-deps && npm --prefix frontend run build",
+    "start": "npm --prefix frontend start"
   },
   "dependencies": {},
   "devDependencies": {}
